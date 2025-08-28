@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class AdminPlan extends Model
 {
     use HasFactory;
-    
+
     protected $table = 'plans'; // 👈 force Laravel to use 'plans' table
 
     protected $fillable = [
@@ -17,6 +17,7 @@ class AdminPlan extends Model
         'product_limit',
         'license_limit',
         'price',
+        'limit',
     ];
 
     protected $casts = [

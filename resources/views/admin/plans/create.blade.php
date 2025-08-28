@@ -1,6 +1,6 @@
 @extends('admin.layout.app')
 
-@section('content')  {{-- 👈 ye add karna zaroori hai --}}
+@section('content')
 
 @include('admin.navbar.header')
 <div class="container">
@@ -13,7 +13,7 @@
         </div>
     @endif
 
-    <form action="" method="POST"> {{-- 👈 action update --}}
+    <form action="{{ route('plans.store') }}" method="POST">
         @csrf
 
         <div class="mb-3">
@@ -48,10 +48,16 @@
                    class="form-control" value="{{ old('price') }}">
         </div>
 
+        {{-- ✅ Limit Checkbox --}}
+        <div class="mb-3 form-check">
+            <input type="hidden" name="limit" value="0"> {{-- unchecked case --}}
+            <input type="checkbox" name="limit" id="limit" value="1" 
+                   class="form-check-input" {{ old('limit', 1) ? 'checked' : '' }}>
+            <label for="limit" class="form-check-label">Enable Limit</label>
+        </div>
+
         <button type="submit" class="btn btn-success">Save Plan</button>
-        <br>
-        <br>
-        <br>
+        <br><br><br>
         <a href="{{ route('admin.plans') }}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
