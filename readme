@@ -1,0 +1,12 @@
+Add Plans table in verilock
+CREATE TABLE plans (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    license_code JSON NOT NULL,   -- multiple license codes as JSON
+    product_limit INT NOT NULL,
+    license_limit INT NOT NULL,
+    price DECIMAL(10,2) NULL,     -- optional field
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL
+);
+
