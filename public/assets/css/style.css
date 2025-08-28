@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+/* Scope styles to the .login-container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    /* Center the form horizontally and vertically */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-container h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    background-color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.text-center {
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+.card-info{
+    padding: 2rem;
+    border-radius: 10px;
+    width: 1600px;
+    margin-left: -8rem;
+}
+
+
+.custom-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Custom card styles */
+.custom-card {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Custom card header */
+.custom-card-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+/* Custom card body */
+.custom-card-body {
+    padding: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Custom chart container to center the canvas */
+.chart-container {
+    text-align: center;
+}
+#licensePieChart {
+    width: 100% !important;
+    height: auto !important;
+}
