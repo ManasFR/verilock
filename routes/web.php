@@ -17,6 +17,7 @@ use App\Http\Controllers\UserRegisterAndLoginController;
 use App\Http\Controllers\ValidateLicenseController;
 use App\Http\Controllers\RedeemCodeController;
 use App\Http\Controllers\UserManagementController;
+use App\Http\Controllers\AdminPlanManagement;
 
 Route::get('/demo', function () {
     return view('users.demo');
@@ -52,9 +53,9 @@ Route::get('/', [UserRegisterAndLoginController::class, 'showForm'])->name('user
 // Protect routes with 'auth' middleware
 Route::middleware('auth')->group(function () {
 
-    Route::get('/admin/plan-management', function () {
-    return view('admin.plans.index');
-})->name('admin.plans');
+
+    Route::get('/admin/plan-management', [AdminPlanManagement::class, 'index'])->name('admin.plans');
+    Route::get('/admin/create/plan-management', [AdminPlanManagement::class, 'create'])->name('admin.create.plans');
 
     Route::get('/product', [ProductController::class, 'index'])->name('admin.product-show');
 

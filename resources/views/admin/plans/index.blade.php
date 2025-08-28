@@ -15,5 +15,5 @@
     <div class="d-flex justify-content-between mb-4">
         <h5>Plans List</h5>
         <input type="text" id="searchInput" class="form-control" placeholder="Search plans..." style="width: 50%;">
-        <a href="" class="btn btn-success" style="width: 20%"><i class="fas fa-box"></i>  Create Plans</a>
+        <a href="{{route('admin.create.plans')}}" class="btn btn-success" style="width: 20%"><i class="fas fa-box"></i>  Create Plans</a>
     </div>
