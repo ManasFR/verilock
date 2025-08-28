@@ -59,9 +59,9 @@
 </head>
 <body style="background:#021414;">
     <div class="start-container" style="margin-top:5rem; padding:10px 20px; text-align:center;">
-         <!-- <img src="https://freeazio.com/wp-content/uploads/2025/01/logo-white-300x300.png" style="height:190px; margin-top:-6rem;">
+         <img src="https://freeazio.com/wp-content/uploads/2025/01/logo-white-300x300.png" style="height:190px; margin-top:-6rem;">
     <h2 style="font-weight:bold; color:white;">Welcome to Verilock</h2>
-         <p style="color:white;">Register Yourself with verilock and protect your work.</p> -->
+         <p style="color:white;">Register Yourself with verilock and protect your work.</p>
         </div>
         <div class="container">
             <!-- Display success or error message -->

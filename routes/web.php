@@ -57,7 +57,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/plan-management', [AdminPlanManagement::class, 'index'])->name('admin.plans');
     Route::get('/admin/create/plan-management', [AdminPlanManagement::class, 'create'])->name('admin.create.plans');
     Route::post('/store/plan-management', [AdminPlanManagement::class, 'store'])->name('plans.store'); // 👈 store route
-
+    Route::get('/edit/plan-management/{id}', [AdminPlanManagement::class, 'edit'])->name('plans.edit'); // 👈 new
+    Route::post('/update/plan-management/{id}', [AdminPlanManagement::class, 'update'])->name('plans.update'); // 👈 new
 
     Route::get('/product', [ProductController::class, 'index'])->name('admin.product-show');
 

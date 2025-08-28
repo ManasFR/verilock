@@ -41,4 +41,35 @@ class AdminPlanManagement extends Controller
                      ->with('success', 'Plan created successfully.');
 }
 
+public function edit($id)
+{
+    $plan = AdminPlan::findOrFail($id);
+    return view('admin.plans.edit', compact('plan'));
+}
+
+public function update(Request $request, $id)
+{
+    $request->validate([
+        'name' => 'required|string',
+        'license_code' => 'required',
+        'product_limit' => 'required|integer',
+        'license_limit' => 'required|integer',
+        'price' => 'nullable|numeric',
+        'limit' => 'boolean',
+    ]);
+
+    $plan = AdminPlan::findOrFail($id);
+
+    $plan->update([
+        'name' => $request->name,
+        'license_code' => $request->license_code,
+        'product_limit' => $request->product_limit,
+        'license_limit' => $request->license_limit,
+        'price' => $request->price,
+        'limit' => $request->limit ?? 0,
+    ]);
+
+    return redirect()->route('admin.plans')->with('success', 'Plan updated successfully.');
+}
+
 }
